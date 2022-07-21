@@ -1,0 +1,105 @@
+.hs-fieldtype-booleancheckbox {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.hs-fieldtype-booleancheckbox legend {
+    margin-left: 80px;
+
+}
+
+.hs-form-booleancheckbox {
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+
+.hs-form-booleancheckbox label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hs-form-booleancheckbox label input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.hs-form-booleancheckbox input[type="checkbox"]+span {
+    white-space: nowrap;
+}
+
+.hs-form-booleancheckbox input[type="checkbox"]+span {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    width: 80px;
+    transform: translateY(-50%);
+    height: 40px;
+    background-color: red;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 40px;
+}
+
+.hs-form-booleancheckbox input[type="checkbox"]+span:before {
+    position: absolute;
+    content: "";
+    height: 35px;
+    width: 35px;
+    left: 2.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0px;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 35px;
+    background-color: #efefef;
+}
+
+.hs-form-booleancheckbox input[type="checkbox"]:checked+span {
+    background-color: #efefef;
+}
+
+.hs-form-booleancheckbox input[type="checkbox"]:focus+span {
+    box-shadow: 26px 26px 52px rgb(0 0 0 / 8%);
+}
+
+.hs-form-booleancheckbox input[type="checkbox"]:checked+span:before {
+    -webkit-transform: translateY(-50%) translateX(40px);
+    -ms-transform: translateY(-50%) translateX(40px);
+    transform: translateY(-50%) translateX(40px);
+    background: #16837D;
+}
+
+.hs-form-booleancheckbox input[type="checkbox"]+span:after {
+    content: 'No';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+.hs-form-booleancheckbox input[type="checkbox"]:checked+span:after {
+    content: 'Yes';
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+@media screen and (max-width: 800px) {
+    .hs-fieldtype-booleancheckbox {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hs-fieldtype-booleancheckbox legend {
+        margin: 0px auto 20px auto !important;
+    }
+}
