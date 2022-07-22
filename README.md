@@ -8,4 +8,4 @@ When creating the form in the HubSpot Form Builder interface, DO NOT:
 - include Help Text IF you want to place a psuedo "label" to the right of the toggler
 
 NOTE:
-- making the field required may require additional styling to handle positioning of error messages
+- making the field "Required" may require additional styling to handle positioning of error messages and required asterisk
